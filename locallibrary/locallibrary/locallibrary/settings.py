@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 import os
 from pathlib import Path
-import os # needed by code below
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-=)gn81b2p0bsu*eekyqhf^=+*w8+=_r^thk5-mlf8i^$$)kcem'
+SECRET_KEY = 'django-insecure-ackfaw5ink+y4(x4cgk2^vzby-ue6tv4u&_ahvcd&-0ywd4ngo'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -31,13 +31,13 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'catalog.apps.CatalogConfig',
+    'django.contrib.admin',
 ]
 
 MIDDLEWARE = [
@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'locallibrary.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -104,9 +104,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = 'ru-RU'
+LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'Europe/Moscow'
+TIME_ZONE = 'Europe/London'
 
 USE_I18N = True
 
